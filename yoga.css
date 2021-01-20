@@ -1,0 +1,215 @@
+:root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "open sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--clr-gray);
+}
+
+.gradient-background {
+  height: 100vh;
+  /* background: linear-gradient(#fff, rgba(255, 255, 0, 0.835)) fixed; */
+  background: linear-gradient(rgb(241, 240, 229), rgb(245, 255, 105)) fixed;
+}
+
+.movie {
+  width: 90vw;
+  display: block;
+  background-size: cover;
+  background-position: right;
+  overflow: hidden;
+  margin: 2rem auto;
+  opacity: 0.7;
+  border-radius: 1em;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.vid-text {
+  position: absolute;
+  /*vw fontsize below will be responsive*/
+  font-size: 3vw;
+  font-family: "Dancing Script", cursive;
+  left: 8rem;
+  top: 16rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.location-header {
+  /* text-align: center; */
+  /* margin: 0.75rem 0 3rem 0;
+  color: #fff; */
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: rgba(26, 2, 0, 0.746);
+  /* font-size: 4rem; */
+  font-size: 6em;
+  font-weight: bold;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  text-shadow: 0px 2px 8px 0px #000;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: rgba(26, 2, 0, 0.664);
+  border-width: 24px;
+  width: 12%;
+  margin: 5rem auto;
+}
+
+.location-p {
+  /* text-align: center; */
+  /* margin: 0 2.5rem 3rem 2.5rem;
+  color: #fff; */
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: rgba(26, 2, 0, 0.746);
+  font-size: 2rem;
+  padding: 2rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+.wrapper-grid {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr);
+  justify-content: center;
+  grid-gap: 2rem;
+  margin: auto;
+}
+
+.container {
+  box-shadow: 0px 2px 8px 0px #000;
+  background-color: rgba(253, 253, 236, 0.993);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(26, 2, 0, 0.746);
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 5rem;
+}
+
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.banner-image {
+  position: absolute;
+  background-image: url(images/color-fade-beach.jpg);
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-image2 {
+  position: absolute;
+  background-image: url(images/palm-beach.jpg);
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-image3 {
+  position: absolute;
+  background-image: url(images/sunset-beach.jpg);
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.yoga-image {
+  position: relative;
+  width: 8rem;
+  clip-path: circle(60px at center);
+  /* border-radius: 50%;
+  z-index: 5; */
+  margin-top: 6rem;
+  /* margin-top: 4.5rem; */
+  margin-bottom: 0.5rem;
+}
+
+.place {
+  font-size: 1.75rem;
+  color: rgba(26, 2, 0, 0.746);
+  text-transform: uppercase;
+}
+
+.description {
+  /* margin: 1rem 2rem 2rem 2rem; */
+
+  margin: 0 1.5rem 3rem 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(26, 2, 0, 0.746);
+}
+
+/* .btn {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--clr-primary);
+  padding: 1rem;
+} */
+
+.card-footer {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(26, 2, 0, 0.746);
+  /* background-color: var(--clr-primary); */
+  /* background-color: rgb(153, 211, 247); */
+  background-color: rgba(255, 217, 0, 0.39);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  margin-top: 3rem;
+  text-decoration: none;
+}
+
+.card-footer:hover {
+  background-color: rgba(5, 125, 200, 0.65);
+  transition: 1s;
+}
+
+@media (min-width: 500px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 760px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 10rem; */
+    grid-gap: 5rem;
+  }
+}

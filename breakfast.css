@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgb(253, 233, 208); */
+  /* background: linear-gradient(rgb(251, 251, 164), orange); */
+  background: linear-gradient(
+    rgba(16, 215, 233, 0.671),
+    10%,
+    rgba(87, 228, 241, 0.342),
+    rgba(76, 114, 104, 0.219)
+  );
+}
+
+.container {
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat 2fr;
+  grid-template-rows: repeat 3fr;
+  grid-gap: 2.5rem;
+  grid-template-areas:
+    "img-1 img-2"
+    "img-3 img-3"
+    "img-4 img-5";
+  position: relative;
+}
+
+.img-1 {
+  grid-area: img-1;
+  background-image: url(images/breakfast-1-c-r.jpg);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  border: #fff 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.img-2 {
+  grid-area: img-2;
+  background-image: url(images/breakfast-2-c-r.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: #fff 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.img-3 {
+  grid-area: img-3;
+  background-image: url(images/breakfast\ -c-r-table.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 1rem 0; */
+  border: #fff 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.img-3::before {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: #fff 1px solid;
+  border-radius: inherit;
+}
+
+.img-4 {
+  grid-area: img-4;
+  background-image: url(images/breakfast-3-r-c.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: #fff 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.img-5 {
+  grid-area: img-5;
+  background-image: url(images/breakfast-5jpeg.jpeg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: #fff 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.breakfast-heading {
+  color: white;
+  z-index: 5;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.6rem;
+}
+
+.breakfast-paragraph {
+  color: white;
+  z-index: 5;
+  padding: 0 5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.25rem;
+  background-color: rgba(16, 215, 233, 0.371);
+  color: #fff;
+  border-radius: 100%;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+  border: #fff 1px solid;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgba(16, 215, 233, 0.671);
+}

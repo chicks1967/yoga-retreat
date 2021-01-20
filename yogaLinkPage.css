@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(253, 233, 208); */
+  background: linear-gradient(rgb(251, 251, 164), orange);
+}
+
+.container {
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat 2fr;
+  grid-template-rows: repeat 3fr;
+  grid-gap: 2.5rem;
+  grid-template-areas:
+    "y-2 y-1"
+    "y-5 y-5"
+    "y-4 y-3";
+  position: relative;
+}
+
+.yogaLink1 {
+  grid-area: y-1;
+  background-image: url(images/yoga-link-1.jpg);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  border: orange 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.yogaLink2 {
+  grid-area: y-2;
+  background-image: url(images/yoga-link-2.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: orange 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.yogaLink5 {
+  grid-area: y-5;
+  background-image: url(images/yoga-link-5.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 1rem 0; */
+  border: red 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.yogaLink5::before {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: red 1px solid;
+  border-radius: inherit;
+}
+
+.yogaLink4 {
+  grid-area: y-4;
+  background-image: url(images/yoga-flow.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: orange 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.yogaLink3 {
+  grid-area: y-3;
+  background-image: url(images/yoga-link-3.jpg);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: orange 1px solid;
+  box-shadow: 0px 2px 8px 0px #000;
+}
+
+.yoga-heading {
+  color: white;
+  z-index: 5;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.6rem;
+}
+
+.yoga-paragraph {
+  color: white;
+  z-index: 5;
+  padding: 0 5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
